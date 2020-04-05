@@ -1,4 +1,3 @@
-
 class UDConverter:
 
     def process_gram_tag(gram: str):
