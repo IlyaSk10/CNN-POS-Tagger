@@ -1,6 +1,4 @@
-class UDConverter:
-
-    def process_gram_tag(gram: str):
+def process_gram_tag(gram: str):
         """
         Выкинуть лишние грамматические категории и отсортировать их в составе значения.
         """
@@ -8,6 +6,8 @@ class UDConverter:
         dropped = ["Animacy", "Aspect", "NumType"]
         gram = [grammem for grammem in gram if sum([drop in grammem for drop in dropped]) == 0]
         return "|".join(sorted(gram)) if gram else "_"
+
+class UDConverter:
     
     @staticmethod
     
