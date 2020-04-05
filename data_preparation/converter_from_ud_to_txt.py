@@ -2,13 +2,13 @@
 class UDConverter:
 
     def process_gram_tag(gram: str):
-    """
-    Выкинуть лишние грамматические категории и отсортировать их в составе значения.
-    """
-    gram = gram.strip().split("|")
-    dropped = ["Animacy", "Aspect", "NumType"]
-    gram = [grammem for grammem in gram if sum([drop in grammem for drop in dropped]) == 0]
-    return "|".join(sorted(gram)) if gram else "_"
+        """
+        Выкинуть лишние грамматические категории и отсортировать их в составе значения.
+        """
+        gram = gram.strip().split("|")
+        dropped = ["Animacy", "Aspect", "NumType"]
+        gram = [grammem for grammem in gram if sum([drop in grammem for drop in dropped]) == 0]
+        return "|".join(sorted(gram)) if gram else "_"
     
     @staticmethod
     
